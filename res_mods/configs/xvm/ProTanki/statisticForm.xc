@@ -8,24 +8,20 @@
     // Шаблон иконки клана.
     "clanIcon": {
       "enabled": true,
-      "x": 65, "y": 6, "width": 16, "height": 16, "align": "center", "alpha": "{{alive?90|50}}", "bindToIcon": true,
+      "x": 65, "y": 6, "width": 16, "height": 16, "align": "center", "alpha": 90, "bindToIcon": true,
       "src": "{{clanicon}}"
-    },
-    // Rank badge definition.
-    // Шаблон иконки бэйджа.
-    "rankBadgeIcon": {
-      "enabled": true,
-      "x": -377, "y": -1, "width": 30, "height": 30, "alpha": "{{alive?100|50}}", "bindToIcon": true,
-      "format": "<img src='img://gui/maps/icons/library/badges/24x24/badge_{{rankBadgeId}}.png' width='24' height='24'>"
     }
   },
   "statisticForm": {
-    // true - Disable Platoon/rank icons.
+    // true - disable Platoon/rank icons.
     // true - убрать отображение иконки взвода/ранга.
     "removeSquadIcon": false,
-    // true - disable rank badge icons
-    // true - убрать отображение иконки бейджа ранга
-    "removeRankBadgeIcon": true,
+    // true - disable rank badge icons.
+    // true - убрать отображение иконки бейджа ранга.
+    "removeRankBadgeIcon": false,
+    // true - disable alpha/beta testers icons.
+    // true - убрать отображение иконки альфа/бета тестеров.
+    "removeTesterIcon": false,
     // Opacity percentage of vehicle icon. 0 - transparent ... 100 - opaque.
     // Прозрачность в процентах иконки танка. 0 - прозрачные, 100 - не прозрачные.
     "vehicleIconAlpha": 100,
@@ -38,14 +34,14 @@
     // true - disable player status icon.
     // true - убрать отображение иконки статуса игрока.
     "removePlayerStatusIcon": false,
-    // Show border for name field (useful for config tuning)
-    // Показывать рамку для поля имени игрока (полезно для настройки конфига)
+    // Show border for name field (useful for config tuning).
+    // Показывать рамку для поля имени игрока (полезно для настройки конфига).
     "nameFieldShowBorder": false,
-    // Show border for vehicle field (useful for config tuning)
-    // Показывать рамку для поля имени танка (полезно для настройки конфига)
+    // Show border for vehicle field (useful for config tuning).
+    // Показывать рамку для поля имени танка (полезно для настройки конфига).
     "vehicleFieldShowBorder": false,
-    // Show border for frags field (useful for config tuning)
-    // Показывать рамку для поля фрагов (полезно для настройки конфига)
+    // Show border for frags field (useful for config tuning).
+    // Показывать рамку для поля фрагов (полезно для настройки конфига).
     "fragsFieldShowBorder": false,
     // X offset for allies squad icons
     // Cмещение по оси X значка взвода союзников
@@ -115,17 +111,15 @@
     "formatRightFrags": "{{frags}}",
     // Extra fields. Fields are placed one above the other.
     // Дополнительные поля. Поля располагаются друг над другом.
-    // Set of formats for left panel (extended format supported, see extra-field.txt)
-    // Набор форматов для левой панели (поддерживается расширенный формат, см. extra-field.txt)
+    // Set of formats for left panel (extended format supported, see extra-field.txt).
+    // Набор форматов для левой панели (поддерживается расширенный формат, см. extra-field.txt).
     "extraFieldsLeft": [
-      ${"templates.clanIcon"},
-      ${"templates.rankBadgeIcon"}
+      ${"templates.clanIcon"}
     ],
-    // Set of formats for right panel (extended format supported, see extra-field.txt)
-    // Набор форматов для правой панели (поддерживается расширенный формат, см. extra-field.txt)
+    // Set of formats for right panel (extended format supported, see extra-field.txt).
+    // Набор форматов для правой панели (поддерживается расширенный формат, см. extra-field.txt).
     "extraFieldsRight": [
-      ${"templates.clanIcon"},
-      ${"templates.rankBadgeIcon"}
+      ${"templates.clanIcon"}
     ]
   }
 }
